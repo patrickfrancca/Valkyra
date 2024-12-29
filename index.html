@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Valkyra | Download videos from your favorite social media</title>
+</head>
+<body>
+    <!-- Superior menu -->
+    <nav class="superior-menu">
+        <ul>
+            <li><a href="#" class="download-icon" data-popup="popup-download"><img src="Images/white-download.png" alt="Download videos icon"></a></li>
+            <li><a href="#" class="premium-icon" data-popup="popup-premium"><img src="Images/white-premium.png" alt="Premium icon" id="premium-icon"></a></li>
+            <li><a href="#" class="settings-icon" data-popup="popup-settings"><img src="Images/white-settings.png" alt="Settings icon"></a></li>
+            <li><a href="#" class="about-icon" data-popup="popup-about" id="menu-about"><img src="Images/white-about.png" alt="About icon"></a></li>
+        </ul>
+    </nav>
+    
+    <!-- Pop-up when clicking on one of the menu options -->
+
+    <!-- Pop-up premium -->
+    <div id="premium-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 class="premium-title">premium</h2>
+            <hr class="separator">
+            <div class="premium-logo">
+                <img src="Images/black-premium.png" alt="Premium Logo">
+            </div>
+            <p class="premium-text">become Premium and download unlimited videos
+            </p>
+            <div class="plans">
+                <div class="plan">
+                    <div class="plan-header">
+                        <span class="discount">20% OFF</span>
+                        <h3>Annual Plan</h3>
+                    </div>
+                    <p class="price">$2.99/mo</p>
+                    <p class="description">Less than a Starbucks coffee per month</p>
+                    <button class="get-started">Get Started</button>
+                </div>
+                <div class="plan">
+                    <h3>Monthly Plan</h3>
+                    <p class="price">$3.60/mo</p>
+                    <p class="description">Less than a Big Mac per month</p>
+                    <button class="get-started">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up settings -->
+    <div id="settings-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 class="settings-title">settings</h2>
+            <hr class="separator">
+            <div class="settings-container">
+                <div class="settings-options">
+                    <div class="settings-option active" data-target="appearance-content">
+                        <img src="Images/black-appearance.png" alt="Appearance Icon" class="settings-icon">
+                        <span class="settings-text">Appearance</span>
+                    </div>
+                    <div class="settings-option" data-target="about-content">
+                        <img src="Images/black-about2.png" alt="About Icon" class="settings-icon">
+                        <span class="settings-text">About</span>
+                    </div>
+                </div>
+                <div class="settings-details">
+                    <div id="appearance-content" class="settings-content active">
+                        <h3>Theme</h3>
+                        <input id="switch" type="checkbox">
+                        <div class="app">
+                            <div class="body">
+                                <div class="phone">
+                                    <div class="menu">
+                                        <div class="time" id="current-time">4:20</div>
+                                        <div class="icons">
+                                            <div class="network"></div>
+                                            <div class="battery"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="circle">
+                                            <div class="crescent"></div>
+                                        </div>
+                                        <label for="switch">
+                                            <div class="toggle"></div>
+                                            <div class="names">
+                                                <p class="light">Light</p>
+                                                <p class="dark">Dark</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="about-content" class="settings-content">
+                        <h3>About</h3>
+                        <p>Our web application is designed to provide you with the most practical and efficient way to download videos from the most popular social media platforms. With an intuitive and fast interface, you can save your favorite videos directly to your device with just a few clicks.
+                        <br>
+                        <br>
+                        Unlike other options, here you won't be interrupted by unwanted ads. Enjoy a clean and seamless browsing experience, tailored for those who value time and simplicity.
+                        <br>
+                        <br>
+                        Whether it's to preserve memories, create content, or share special moments, our software is the perfect tool to meet your needs with quality and ease.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separator-container">
+                <hr class="separator-small">
+                <p class="coming-soon">More settings coming soon...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+
+    <div class="container-principal">
+        <h1>Easily download videos from your favorite social media platform.</h1>
+    
+        <div class="input-area">
+            <div class="input-container">
+                <img src="Images/black-link.png" alt="Link icon" class="input-icon" id="paste-icon">
+                <input type="url" placeholder="paste the link here" id="link-input">
+            </div>
+            <div class="button" id="download-button" data-tooltip="Size: 20Mb">
+                <div class="button-wrapper">
+                    <div class="text">Download</div>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>            
+        </div>
+    
+        <div class="buttons-area">
+            <label data-icon="full">
+                <input type="radio" name="download-type" value="full" checked>
+                <span>full video</span>
+            </label>
+            <label data-icon="muted">
+                <input type="radio" name="download-type" value="muted">
+                <span>muted video</span>
+            </label>
+            <label data-icon="audio">
+                <input type="radio" name="download-type" value="audio">
+                <span>only audio</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Botão na parte inferior do site -->
+    <div class="bottom-tooltip">
+        <div class="uiverse">
+            <span class="tooltip">YouTube, Instagram, TikTok (without watermark), Facebook, Twitter (X), LinkedIn, Vimeo and more. (You can enter the video url from your desired social network to check whether the system supports it or not)</span>
+            <span>
+                Supported Platforms
+            </span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
